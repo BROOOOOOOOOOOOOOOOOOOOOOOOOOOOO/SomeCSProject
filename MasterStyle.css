@@ -1,0 +1,76 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    
+}
+
+.mainTable {
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+}
+
+.RegTable {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.button {
+    color: green;
+    font-size: 3vh;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.firstSTR {
+    height: 30vh;
+}
+
+input {
+    height: 4vh;
+    width: 100%;
+    height:100%;
+}
+
+td {
+    border-collapse: collapse;
+    border: 1px solid black;
+    padding: 0;
+    margin: 0;
+    color: green;
+    font-size: 3vh;
+}
+.emblema {
+    width: 20vw;
+    
+}
+
+.navPanel {
+    width: 15vw;
+    height: 65vh;
+    
+}
+
+.siteName {
+    width: 55vw;
+    
+}
+
+.autorization {
+    width: 20vw
+}
+
+.menuTable {
+    text-align: center;
+    width: 100%;
+    padding-bottom:100vh;
+}

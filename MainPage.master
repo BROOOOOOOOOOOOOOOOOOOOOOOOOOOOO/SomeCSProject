@@ -1,0 +1,122 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MainPage.master.cs" Inherits="DB.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width:100%;
+        }
+    </style>
+    <link href="MasterStyle.css" rel="stylesheet" />
+</head>
+<body style="background-color:antiquewhite;">
+    <form id="form1" runat="server">
+        <table class="mainTable">
+            <tr class="firstST">
+                 <td class="emblema" style="text-align:center">
+                     <img src="krest.png" alt="ы">
+                 </td>
+                <td class="siteName" style="text-align: center; font-size: 8vh; color: green">Сеть аптек "Подорожник"</td>
+                 <td class="autorization">
+                     <table class="RegTable">
+                           <tr style="height:25%">
+                              <td colspan="2" style="text-align:center" valign="center">
+                                  <asp:Label ID="HeadAuthLabel" Visible="True" runat="server" Width="100%" Text="Авторизация" ForeColor="green"></asp:Label>
+                              </td>    
+                           </tr>
+                           <tr style="height:15%">
+                               <td>
+                                  <asp:Label ID="LabelLogin" Visible="True" runat="server" Width="100%" Text="Логин" ForeColor="green"></asp:Label>
+                               </td>
+                               <td>
+                                   <asp:TextBox ID="TextBox1" runat="server">
+
+                                   </asp:TextBox></td>
+                           </tr>
+                           <tr style="height:15%">
+                              <td>
+                                  <asp:Label ID="LabelPassword" Visible="True" runat="server" Width="100%" Text="Пароль" ForeColor="green"></asp:Label>
+                              </td>
+                              <td><asp:TextBox ID="TextBox2" TextMode="Password" MaxLength="20" runat="server"></asp:TextBox></td>
+                           </tr>
+                           <tr style="height:15%">
+                              <td><asp:Button ID="EnterButton" runat="server" Font-Size="20px" Text="Вход" OnClick="EnterButton_Click" /></td>
+                              <td><asp:Button ID="RegButton" runat="server" Font-Size="20px" Text="Регистрация" OnClick="RegButton_Click" /></td>
+                           </tr>
+                         <tr style="height: 15%">
+                             <td colspan="2">
+                                 <asp:Button ID="LeaveButton" Visible="False" Font-Size="20px" runat="server" Text="Выход" OnClick="LeaveButton_Click" />
+                             </td>
+                         </tr>
+                     </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="navPanel">
+                    <table class="menuTable">
+                        <tr>
+                            <td>
+                                <asp:LinkButton  ID="LinkButtonMain" Visible="true" ForeColor="green" runat="server" OnClick="LinkButtonMain_Click">Главная</asp:LinkButton>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:LinkButton  ID="LinkButtonGoods" Visible="true" ForeColor="green" runat="server" OnClick="LinkButtonGoods_Click">Товары</asp:LinkButton>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                 <asp:LinkButton  ID="LinkButtonProfile" Visible="true" ForeColor="green" runat="server" OnClick="LinkButtonProfile_Click">Мой профиль</asp:LinkButton>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:LinkButton ID="LinkButtonBasket" Visible="true" ForeColor="green" runat="server" OnClick="LinkButtonBasket_Click">Корзина</asp:LinkButton>
+                            </td>
+                        </tr>
+                        <tr>
+                             <td>
+                                <asp:LinkButton  ID="LinkButtonOrders" Visible="true" ForeColor="green" runat="server" OnClick="LinkButtonOrders_Click">Мои заказы</asp:LinkButton>
+                             </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:LinkButton ID="LinkButtonReviews" Visible="true" ForeColor="green" runat="server" OnClick="LinkButtonReviews_Click">Отзывы о компании</asp:LinkButton>
+                            </td>
+                        </tr>
+                        <tr>
+                             <td>
+                                 <asp:LinkButton  ID="LinkButtonGoodsEditor"  Visible="true" ForeColor="green" runat="server" OnClick="LinkButtonGoodsEditor_Click">Редактор товаров</asp:LinkButton>
+                             </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                 <asp:LinkButton  ID="LinkButtonOrdersEditor"  Visible="true" ForeColor="green" runat="server" OnClick="LinkButtonOrdersEditor_Click">Редактор заказов</asp:LinkButton>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                 <asp:LinkButton  ID="LinkButtonNewsEditor"  Visible="true" ForeColor="green" runat="server" OnClick="LinkButtonNewsEditor_Click">Редактор новостей</asp:LinkButton>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td colspan="2" style="vertical-align:top"><br/>
+                     <div style="text-align:right; margin-right: 2.5vw;margin-top: 0;">
+                         <asp:Label ID="ErrorLabel" Visible="False" runat="server" Width="100%" Text="Ошибка Авторизации!" Font-Bold="True" Font-Size="30px" ForeColor="red"></asp:Label>
+                     </div> 
+                    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                     
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+       </table>
+    </form>
+</body>
+</html>
